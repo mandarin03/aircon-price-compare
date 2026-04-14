@@ -97,13 +97,76 @@ const WEBSITE_CONFIGS: WebsiteConfig[] = [
       },
     ],
   },
-  // 추가 업체는 여기에 설정 추가
-  // {
-  //   name: "더크리닝",
-  //   url: "http://thecleaning.co.kr/",
-  //   regions: [...],
-  //   prices: [...],
-  // },
+  {
+    name: "미소",
+    url: "https://miso.kr/appclean",
+    regions: [
+      // 전국 서비스이므로 서울·경기 주요 지역 모두 포함
+      { city: "seoul", district: "gangnam" },
+      { city: "seoul", district: "seocho" },
+      { city: "seoul", district: "songpa" },
+      { city: "seoul", district: "mapo" },
+      { city: "seoul", district: "yeongdeungpo" },
+      { city: "seoul", district: "nowon" },
+      { city: "seoul", district: "dongdaemun" },
+      { city: "gyeonggi", district: "seongnam" },
+      { city: "gyeonggi", district: "suwon" },
+      { city: "gyeonggi", district: "goyang" },
+      { city: "gyeonggi", district: "yongin" },
+      { city: "gyeonggi", district: "bucheon" },
+    ],
+    prices: [
+      {
+        airconType: "wall-mount",
+        cleaningMethod: "disassembly",
+        price: 53910,
+        priceMax: 59900,
+        priceUnit: "1대 기준",
+        includedServices: ["filter-wash", "sanitization", "mold-removal"],
+        additionalServices: ["고압세척"],
+        extraCharges: [
+          { label: "실외기 청소", amount: 30000, condition: "별도 요청 시" },
+        ],
+        regionCity: null,
+        regionDistrict: null,
+        isIncomplete: false,
+        incompleteFields: [],
+      },
+      {
+        airconType: "standing",
+        cleaningMethod: "disassembly",
+        price: 89910,
+        priceMax: 109000,
+        priceUnit: "1대 기준 (LG/삼성 89,910원, 기타 98,100원)",
+        includedServices: ["filter-wash", "sanitization", "mold-removal"],
+        additionalServices: ["고압세척"],
+        extraCharges: [
+          { label: "실외기 청소", amount: 50000, condition: "별도 요청 시" },
+        ],
+        regionCity: null,
+        regionDistrict: null,
+        isIncomplete: false,
+        incompleteFields: [],
+      },
+      {
+        airconType: "ceiling",
+        cleaningMethod: "disassembly",
+        price: 78210,
+        priceMax: 119000,
+        priceUnit: "1대 기준 (1·2way 78,210원, 4way 107,100원)",
+        includedServices: ["filter-wash", "sanitization", "drain-pipe", "mold-removal"],
+        additionalServices: ["고압세척"],
+        extraCharges: [
+          { label: "층고 3~4m", amount: 30000, condition: "층고 3m 이상" },
+          { label: "층고 4~5m", amount: 40000, condition: "층고 4m 이상" },
+        ],
+        regionCity: null,
+        regionDistrict: null,
+        isIncomplete: false,
+        incompleteFields: [],
+      },
+    ],
+  },
 ];
 
 /* ------------------------------------------------------------------ */
