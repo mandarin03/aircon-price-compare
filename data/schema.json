@@ -1,0 +1,211 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aircon-price-compare.example/schemas/price-data.json",
+  "title": "에어컨 청소 가격 데이터",
+  "description": "크롤링 및 기사님 등록으로 수집된 에어컨 청소 가격 데이터의 JSON Schema",
+  "type": "object",
+  "required": ["entries", "metadata"],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "description": "데이터 파일 메타 정보",
+      "required": ["version", "lastUpdated", "totalEntries"],
+      "properties": {
+        "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+        "lastUpdated": { "type": "string", "format": "date-time" },
+        "totalEntries": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "entries": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/PriceEntry" }
+    }
+  },
+  "$defs": {
+    "PriceEntry": {
+      "type": "object",
+      "required": [
+        "id", "airconType", "cleaningMethod",
+        "regionCity", "regionDistrict",
+        "price", "priceUnit",
+        "includedServices",
+        "providerName", "sourcePlatform", "sourceUrl",
+        "isIncomplete", "collectedAt", "verifiedAt", "isActive"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "description": "고유 ID (UUID v4)"
+        },
+        "airconType": {
+          "type": "string",
+          "enum": ["wall-mount", "standing", "ceiling", "system", "window"],
+          "description": "에어컨 유형"
+        },
+        "cleaningMethod": {
+          "type": "string",
+          "enum": ["general", "disassembly", "complete-disassembly", "unknown"],
+          "description": "청소 방식"
+        },
+        "regionCity": {
+          "type": "string",
+          "enum": ["seoul", "gyeonggi"],
+          "description": "시/도"
+        },
+        "regionDistrict": {
+          "type": "string",
+          "description": "구/시/군 슬러그"
+        },
+        "price": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "기본 가격 (원, 1대 기준)"
+        },
+        "priceMax": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "description": "가격 상한 (범위 가격인 경우)"
+        },
+        "priceUnit": {
+          "type": "string",
+          "description": "가격 단위 설명"
+        },
+        "includedServices": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "filter-wash", "sanitization", "outdoor-unit",
+              "drain-pipe", "mold-removal", "odor-removal", "operation-check"
+            ]
+          },
+          "description": "포함 서비스 목록"
+        },
+        "additionalServices": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "추가 서비스 (비표준)"
+        },
+        "extraCharges": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/ExtraCharge" },
+          "description": "추가 요금 항목"
+        },
+        "providerName": {
+          "type": "string",
+          "description": "비식별 업체명"
+        },
+        "sourcePlatform": {
+          "type": "string",
+          "enum": ["soomgo", "danggeun", "blog", "website", "registration"],
+          "description": "데이터 출처 플랫폼"
+        },
+        "sourceUrl": {
+          "type": "string",
+          "format": "uri",
+          "description": "원래 출처 URL"
+        },
+        "isIncomplete": {
+          "type": "boolean",
+          "description": "데이터 불완전 여부"
+        },
+        "incompleteFields": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/IncompleteField" },
+          "description": "불완전한 필드 목록"
+        },
+        "collectedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "데이터 최초 수집일"
+        },
+        "verifiedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "데이터 최종 확인일"
+        },
+        "isActive": {
+          "type": "boolean",
+          "description": "데이터 활성 상태"
+        }
+      }
+    },
+    "ExtraCharge": {
+      "type": "object",
+      "required": ["label", "amount"],
+      "properties": {
+        "label": { "type": "string", "description": "항목명" },
+        "amount": { "type": "integer", "description": "추가 금액 (원)" },
+        "condition": { "type": ["string", "null"], "description": "조건 설명" }
+      }
+    },
+    "IncompleteField": {
+      "type": "object",
+      "required": ["field", "reason"],
+      "properties": {
+        "field": { "type": "string", "description": "필드명" },
+        "reason": {
+          "type": "string",
+          "enum": ["not-specified", "ambiguous", "crawl-error"],
+          "description": "미확인 사유"
+        }
+      }
+    },
+    "CleaningMethodInfo": {
+      "type": "object",
+      "description": "청소 방식 표준 카테고리 상세 정의",
+      "required": ["code", "label", "shortLabel", "description", "priority", "priceMultiplier", "matchKeywords"],
+      "properties": {
+        "code": {
+          "type": "string",
+          "enum": ["general", "disassembly", "complete-disassembly", "unknown"],
+          "description": "청소 방식 코드"
+        },
+        "label": { "type": "string", "description": "한글 라벨" },
+        "shortLabel": { "type": "string", "description": "짧은 한글 라벨 (모바일 UI용)" },
+        "description": { "type": "string", "description": "사용자용 설명" },
+        "priority": { "type": "integer", "minimum": 1, "description": "정렬 우선순위" },
+        "priceMultiplier": { "type": "number", "minimum": 0, "description": "가격 가산율 (분해 기준 1.0)" },
+        "iconPath": { "type": "string", "description": "SVG 아이콘 path" },
+        "matchKeywords": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "크롤링 데이터 매칭용 키워드"
+        }
+      }
+    },
+    "IncludedServiceInfo": {
+      "type": "object",
+      "description": "포함 서비스 표준 카테고리 상세 정의",
+      "required": ["code", "label", "shortLabel", "description", "priority", "defaultInclusionRate", "typicalExtraCost", "matchKeywords"],
+      "properties": {
+        "code": {
+          "type": "string",
+          "enum": ["filter-wash", "sanitization", "outdoor-unit", "drain-pipe", "mold-removal", "odor-removal", "operation-check"],
+          "description": "서비스 코드"
+        },
+        "label": { "type": "string", "description": "한글 라벨" },
+        "shortLabel": { "type": "string", "description": "짧은 한글 라벨 (모바일 뱃지용)" },
+        "description": { "type": "string", "description": "사용자용 설명" },
+        "priority": { "type": "integer", "minimum": 1, "description": "정렬 우선순위 (소비자 관심도 기준)" },
+        "defaultInclusionRate": { "type": "number", "minimum": 0, "maximum": 1, "description": "기본 포함 빈도 (0~1)" },
+        "typicalExtraCost": { "type": "integer", "minimum": 0, "description": "별도 추가 시 일반적 비용 (원)" },
+        "iconPath": { "type": "string", "description": "SVG 아이콘 path" },
+        "applicableAirconTypes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["wall-mount", "standing", "ceiling", "system", "window"]
+          },
+          "description": "적용 가능한 에어컨 유형 (빈 배열이면 전체)"
+        },
+        "matchKeywords": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "크롤링 데이터 매칭용 키워드"
+        }
+      }
+    }
+  }
+}

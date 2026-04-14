@@ -1,26 +1,206 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f9fafb;
+  --foreground: #111827;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Remove default details marker in Safari */
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary {
+  list-style: none;
+}
+
+/* Hide scrollbar for horizontal scroll containers */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Dropdown animation */
+@keyframes dropdown-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-dropdown-in {
+  animation: dropdown-in 0.15s ease-out;
+}
+
+/* Tooltip animation */
+@keyframes tooltip-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-tooltip-in {
+  animation: tooltip-in 0.15s ease-out;
+}
+
+/* Highlight pulse animation for best-price cards */
+@keyframes highlight-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.3);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(59, 130, 246, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+  }
+}
+
+.animate-highlight-pulse {
+  animation: highlight-pulse 2s ease-in-out 1;
+}
+
+/* Card tap feedback on mobile */
+@media (hover: none) {
+  .card-tap-feedback:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease-out;
+  }
+}
+
+/* Smooth filter transition */
+.filter-transition {
+  transition: all 0.2s ease-out;
+}
+
+/* Row highlight on hover/focus */
+.row-highlight {
+  transition: background-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.row-highlight:hover,
+.row-highlight:focus-within {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Scroll fade indicators for horizontal scroll containers */
+.scroll-fade-right {
+  mask-image: linear-gradient(to right, black 85%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, black 85%, transparent 100%);
+}
+
+.scroll-fade-left {
+  mask-image: linear-gradient(to left, black 85%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to left, black 85%, transparent 100%);
+}
+
+.scroll-fade-both {
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+
+/* Service badge interactive styles */
+.service-badge-interactive {
+  cursor: help;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.service-badge-interactive:hover {
+  filter: brightness(0.95);
+}
+
+.service-badge-interactive:active {
+  transform: scale(0.95);
+}
+
+/* Grid cell highlight */
+.grid-cell-highlight {
+  transition: background-color 0.15s ease;
+}
+
+.grid-cell-highlight:hover {
+  background-color: rgba(59, 130, 246, 0.05);
+}
+
+/* Price range slider custom styles */
+input[type="range"].price-range-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  background: #e5e7eb;
+  border-radius: 2px;
+  outline: none;
+}
+
+input[type="range"].price-range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: #3b82f6;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+input[type="range"].price-range-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  background: #3b82f6;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Sticky column shadow for mobile grid tables */
+.sticky-col-shadow {
+  box-shadow: 2px 0 4px -1px rgba(0, 0, 0, 0.06);
 }

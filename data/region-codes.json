@@ -1,0 +1,850 @@
+{
+  "version": "1.0.0",
+  "description": "서울·경기 지역 표준 코드 데이터 — 시/구/동 계층 구조",
+  "lastUpdated": "2026-04-14",
+  "source": "행정안전부 행정표준코드관리시스템 기반 정리",
+  "cities": [
+    {
+      "code": "seoul",
+      "name": "서울특별시",
+      "shortName": "서울",
+      "slug": "seoul",
+      "adminCode": "11",
+      "districts": [
+        {
+          "code": "gangnam",
+          "name": "강남구",
+          "slug": "gangnam",
+          "adminCode": "11680",
+          "dongs": [
+            { "code": "sinsa", "name": "신사동", "adminCode": "1168010100" },
+            { "code": "nonhyeon", "name": "논현동", "adminCode": "1168010300" },
+            { "code": "apgujeong", "name": "압구정동", "adminCode": "1168010500" },
+            { "code": "cheongdam", "name": "청담동", "adminCode": "1168010600" },
+            { "code": "samsung", "name": "삼성동", "adminCode": "1168010700" },
+            { "code": "daechi", "name": "대치동", "adminCode": "1168010800" },
+            { "code": "yeoksam", "name": "역삼동", "adminCode": "1168010900" },
+            { "code": "dogok", "name": "도곡동", "adminCode": "1168011000" },
+            { "code": "gaepo", "name": "개포동", "adminCode": "1168011100" },
+            { "code": "il-won", "name": "일원동", "adminCode": "1168011300" },
+            { "code": "suseo", "name": "수서동", "adminCode": "1168011400" },
+            { "code": "segok", "name": "세곡동", "adminCode": "1168011500" },
+            { "code": "jamwon", "name": "잠원동", "adminCode": "1168010200" },
+            { "code": "banpo", "name": "반포동", "adminCode": "1168010400" }
+          ]
+        },
+        {
+          "code": "gangdong",
+          "name": "강동구",
+          "slug": "gangdong",
+          "adminCode": "11740",
+          "dongs": [
+            { "code": "gangil", "name": "강일동", "adminCode": "1174010100" },
+            { "code": "sangil", "name": "상일동", "adminCode": "1174010200" },
+            { "code": "myeongilmyeongil", "name": "명일동", "adminCode": "1174010300" },
+            { "code": "godeok", "name": "고덕동", "adminCode": "1174010400" },
+            { "code": "amsa", "name": "암사동", "adminCode": "1174010500" },
+            { "code": "cheonho", "name": "천호동", "adminCode": "1174010700" },
+            { "code": "seongnaemyeong", "name": "성내동", "adminCode": "1174010800" },
+            { "code": "gilmyeong", "name": "길동", "adminCode": "1174010900" },
+            { "code": "dunchon", "name": "둔촌동", "adminCode": "1174011000" }
+          ]
+        },
+        {
+          "code": "gangbuk",
+          "name": "강북구",
+          "slug": "gangbuk",
+          "adminCode": "11305",
+          "dongs": [
+            { "code": "miahyeong", "name": "미아동", "adminCode": "1130510100" },
+            { "code": "beon", "name": "번동", "adminCode": "1130510200" },
+            { "code": "suyu", "name": "수유동", "adminCode": "1130510300" },
+            { "code": "uiryeong", "name": "우이동", "adminCode": "1130510400" },
+            { "code": "insu", "name": "인수동", "adminCode": "1130510500" },
+            { "code": "samyang", "name": "삼양동", "adminCode": "1130510600" },
+            { "code": "songcheon", "name": "송천동", "adminCode": "1130510700" },
+            { "code": "samgaksan", "name": "삼각산동", "adminCode": "1130510800" }
+          ]
+        },
+        {
+          "code": "gangseo",
+          "name": "강서구",
+          "slug": "gangseo",
+          "adminCode": "11500",
+          "dongs": [
+            { "code": "yeomchang", "name": "염창동", "adminCode": "1150010100" },
+            { "code": "deungchon", "name": "등촌동", "adminCode": "1150010200" },
+            { "code": "hwagok", "name": "화곡동", "adminCode": "1150010300" },
+            { "code": "gayang", "name": "가양동", "adminCode": "1150010400" },
+            { "code": "balsan", "name": "발산동", "adminCode": "1150010500" },
+            { "code": "gonghang", "name": "공항동", "adminCode": "1150010600" },
+            { "code": "banghwa", "name": "방화동", "adminCode": "1150010700" },
+            { "code": "magok", "name": "마곡동", "adminCode": "1150010800" }
+          ]
+        },
+        {
+          "code": "gwanak",
+          "name": "관악구",
+          "slug": "gwanak",
+          "adminCode": "11620",
+          "dongs": [
+            { "code": "bongcheon", "name": "봉천동", "adminCode": "1162010100" },
+            { "code": "sillim", "name": "신림동", "adminCode": "1162010200" },
+            { "code": "nangok", "name": "난곡동", "adminCode": "1162010300" },
+            { "code": "jowon", "name": "조원동", "adminCode": "1162010400" },
+            { "code": "seonglyeon", "name": "성현동", "adminCode": "1162010500" },
+            { "code": "cheongnyong", "name": "청룡동", "adminCode": "1162010600" },
+            { "code": "euncheon", "name": "은천동", "adminCode": "1162010700" },
+            { "code": "jungang", "name": "중앙동", "adminCode": "1162010800" },
+            { "code": "inheon", "name": "인헌동", "adminCode": "1162010900" },
+            { "code": "namhyeon", "name": "남현동", "adminCode": "1162011000" },
+            { "code": "daehak", "name": "대학동", "adminCode": "1162011100" }
+          ]
+        },
+        {
+          "code": "gwangjin",
+          "name": "광진구",
+          "slug": "gwangjin",
+          "adminCode": "11215",
+          "dongs": [
+            { "code": "junggok", "name": "중곡동", "adminCode": "1121510100" },
+            { "code": "neung", "name": "능동", "adminCode": "1121510200" },
+            { "code": "guui", "name": "구의동", "adminCode": "1121510300" },
+            { "code": "gwangjang", "name": "광장동", "adminCode": "1121510400" },
+            { "code": "jayang", "name": "자양동", "adminCode": "1121510500" },
+            { "code": "hwayangmyeong", "name": "화양동", "adminCode": "1121510600" },
+            { "code": "gunja", "name": "군자동", "adminCode": "1121510700" }
+          ]
+        },
+        {
+          "code": "guro",
+          "name": "구로구",
+          "slug": "guro",
+          "adminCode": "11530",
+          "dongs": [
+            { "code": "sindorim", "name": "신도림동", "adminCode": "1153010100" },
+            { "code": "guro", "name": "구로동", "adminCode": "1153010200" },
+            { "code": "garibong", "name": "가리봉동", "adminCode": "1153010300" },
+            { "code": "gocheok", "name": "고척동", "adminCode": "1153010400" },
+            { "code": "gaebong", "name": "개봉동", "adminCode": "1153010500" },
+            { "code": "oryu", "name": "오류동", "adminCode": "1153010600" },
+            { "code": "hang", "name": "항동", "adminCode": "1153010700" },
+            { "code": "sugung", "name": "수궁동", "adminCode": "1153010800" }
+          ]
+        },
+        {
+          "code": "geumcheon",
+          "name": "금천구",
+          "slug": "geumcheon",
+          "adminCode": "11545",
+          "dongs": [
+            { "code": "gasanmyeong", "name": "가산동", "adminCode": "1154510100" },
+            { "code": "doksan", "name": "독산동", "adminCode": "1154510200" },
+            { "code": "siheung", "name": "시흥동", "adminCode": "1154510300" }
+          ]
+        },
+        {
+          "code": "nowon",
+          "name": "노원구",
+          "slug": "nowon",
+          "adminCode": "11350",
+          "dongs": [
+            { "code": "wolgye", "name": "월계동", "adminCode": "1135010100" },
+            { "code": "gongneung", "name": "공릉동", "adminCode": "1135010200" },
+            { "code": "hagye", "name": "하계동", "adminCode": "1135010300" },
+            { "code": "junggye", "name": "중계동", "adminCode": "1135010400" },
+            { "code": "sanggye", "name": "상계동", "adminCode": "1135010500" }
+          ]
+        },
+        {
+          "code": "dobong",
+          "name": "도봉구",
+          "slug": "dobong",
+          "adminCode": "11320",
+          "dongs": [
+            { "code": "ssangmun", "name": "쌍문동", "adminCode": "1132010100" },
+            { "code": "banghak", "name": "방학동", "adminCode": "1132010200" },
+            { "code": "changmyeong", "name": "창동", "adminCode": "1132010300" },
+            { "code": "dobong", "name": "도봉동", "adminCode": "1132010400" }
+          ]
+        },
+        {
+          "code": "dongdaemun",
+          "name": "동대문구",
+          "slug": "dongdaemun",
+          "adminCode": "11230",
+          "dongs": [
+            { "code": "sinseol", "name": "신설동", "adminCode": "1123010100" },
+            { "code": "yongdu", "name": "용두동", "adminCode": "1123010200" },
+            { "code": "jegi", "name": "제기동", "adminCode": "1123010300" },
+            { "code": "jeonneong", "name": "전농동", "adminCode": "1123010400" },
+            { "code": "dapsimni", "name": "답십리동", "adminCode": "1123010500" },
+            { "code": "janganpyeong", "name": "장안동", "adminCode": "1123010600" },
+            { "code": "cheongnyangni", "name": "청량리동", "adminCode": "1123010700" },
+            { "code": "hoegi", "name": "회기동", "adminCode": "1123010800" },
+            { "code": "hwiryu", "name": "휘경동", "adminCode": "1123010900" },
+            { "code": "imun", "name": "이문동", "adminCode": "1123011000" }
+          ]
+        },
+        {
+          "code": "dongjak",
+          "name": "동작구",
+          "slug": "dongjak",
+          "adminCode": "11590",
+          "dongs": [
+            { "code": "noryangjin", "name": "노량진동", "adminCode": "1159010100" },
+            { "code": "sangdo", "name": "상도동", "adminCode": "1159010200" },
+            { "code": "heukseok", "name": "흑석동", "adminCode": "1159010300" },
+            { "code": "sadang", "name": "사당동", "adminCode": "1159010400" },
+            { "code": "daebang", "name": "대방동", "adminCode": "1159010500" },
+            { "code": "sindaebang", "name": "신대방동", "adminCode": "1159010600" }
+          ]
+        },
+        {
+          "code": "mapo",
+          "name": "마포구",
+          "slug": "mapo",
+          "adminCode": "11440",
+          "dongs": [
+            { "code": "ahyeon", "name": "아현동", "adminCode": "1144010100" },
+            { "code": "gongdeok", "name": "공덕동", "adminCode": "1144010200" },
+            { "code": "dohwa", "name": "도화동", "adminCode": "1144010300" },
+            { "code": "yonggang", "name": "용강동", "adminCode": "1144010400" },
+            { "code": "daehung", "name": "대흥동", "adminCode": "1144010500" },
+            { "code": "sinsu", "name": "신수동", "adminCode": "1144010600" },
+            { "code": "seogyo", "name": "서교동", "adminCode": "1144010700" },
+            { "code": "donggyo", "name": "동교동", "adminCode": "1144010800" },
+            { "code": "hapjeong", "name": "합정동", "adminCode": "1144010900" },
+            { "code": "mangwon", "name": "망원동", "adminCode": "1144011000" },
+            { "code": "yeonnam", "name": "연남동", "adminCode": "1144011100" },
+            { "code": "sangam", "name": "상암동", "adminCode": "1144011200" },
+            { "code": "seongsan", "name": "성산동", "adminCode": "1144011300" }
+          ]
+        },
+        {
+          "code": "seodaemun",
+          "name": "서대문구",
+          "slug": "seodaemun",
+          "adminCode": "11410",
+          "dongs": [
+            { "code": "chunghyeon", "name": "충현동", "adminCode": "1141010100" },
+            { "code": "bukahyeon", "name": "북아현동", "adminCode": "1141010200" },
+            { "code": "sinchon", "name": "신촌동", "adminCode": "1141010300" },
+            { "code": "yeonhui", "name": "연희동", "adminCode": "1141010400" },
+            { "code": "hongeun", "name": "홍은동", "adminCode": "1141010500" },
+            { "code": "hongje", "name": "홍제동", "adminCode": "1141010600" },
+            { "code": "namgajwa", "name": "남가좌동", "adminCode": "1141010700" },
+            { "code": "bukgajwa", "name": "북가좌동", "adminCode": "1141010800" }
+          ]
+        },
+        {
+          "code": "seocho",
+          "name": "서초구",
+          "slug": "seocho",
+          "adminCode": "11650",
+          "dongs": [
+            { "code": "seocho", "name": "서초동", "adminCode": "1165010100" },
+            { "code": "jamwon", "name": "잠원동", "adminCode": "1165010200" },
+            { "code": "banpomyeong", "name": "반포동", "adminCode": "1165010300" },
+            { "code": "bangbae", "name": "방배동", "adminCode": "1165010400" },
+            { "code": "yangjae", "name": "양재동", "adminCode": "1165010500" },
+            { "code": "umyeon", "name": "우면동", "adminCode": "1165010600" },
+            { "code": "naegok", "name": "내곡동", "adminCode": "1165010700" },
+            { "code": "sinwon", "name": "신원동", "adminCode": "1165010800" }
+          ]
+        },
+        {
+          "code": "seongdong",
+          "name": "성동구",
+          "slug": "seongdong",
+          "adminCode": "11200",
+          "dongs": [
+            { "code": "sangwangsimni", "name": "상왕십리동", "adminCode": "1120010100" },
+            { "code": "hawangsimni", "name": "하왕십리동", "adminCode": "1120010200" },
+            { "code": "seongsu", "name": "성수동", "adminCode": "1120010300" },
+            { "code": "songjeong", "name": "송정동", "adminCode": "1120010400" },
+            { "code": "oksu", "name": "옥수동", "adminCode": "1120010500" },
+            { "code": "geumho", "name": "금호동", "adminCode": "1120010600" },
+            { "code": "haengdang", "name": "행당동", "adminCode": "1120010700" },
+            { "code": "eungbong", "name": "응봉동", "adminCode": "1120010800" },
+            { "code": "majang", "name": "마장동", "adminCode": "1120010900" },
+            { "code": "sageun", "name": "사근동", "adminCode": "1120011000" }
+          ]
+        },
+        {
+          "code": "seongbuk",
+          "name": "성북구",
+          "slug": "seongbuk",
+          "adminCode": "11290",
+          "dongs": [
+            { "code": "seongbuk", "name": "성북동", "adminCode": "1129010100" },
+            { "code": "samseong", "name": "삼선동", "adminCode": "1129010200" },
+            { "code": "dongseon", "name": "동선동", "adminCode": "1129010300" },
+            { "code": "donam", "name": "돈암동", "adminCode": "1129010400" },
+            { "code": "anam", "name": "안암동", "adminCode": "1129010500" },
+            { "code": "bomun", "name": "보문동", "adminCode": "1129010600" },
+            { "code": "jeongneung", "name": "정릉동", "adminCode": "1129010700" },
+            { "code": "gileum", "name": "길음동", "adminCode": "1129010800" },
+            { "code": "jongam", "name": "종암동", "adminCode": "1129010900" },
+            { "code": "wolgok", "name": "월곡동", "adminCode": "1129011000" },
+            { "code": "jangwi", "name": "장위동", "adminCode": "1129011100" },
+            { "code": "seokgwan", "name": "석관동", "adminCode": "1129011200" }
+          ]
+        },
+        {
+          "code": "songpa",
+          "name": "송파구",
+          "slug": "songpa",
+          "adminCode": "11710",
+          "dongs": [
+            { "code": "jamsil", "name": "잠실동", "adminCode": "1171010100" },
+            { "code": "sincheon", "name": "신천동", "adminCode": "1171010200" },
+            { "code": "pungnap", "name": "풍납동", "adminCode": "1171010300" },
+            { "code": "songpa", "name": "송파동", "adminCode": "1171010400" },
+            { "code": "garak", "name": "가락동", "adminCode": "1171010500" },
+            { "code": "munjeong", "name": "문정동", "adminCode": "1171010600" },
+            { "code": "jangji", "name": "장지동", "adminCode": "1171010700" },
+            { "code": "wirye", "name": "위례동", "adminCode": "1171010800" },
+            { "code": "geoyeo", "name": "거여동", "adminCode": "1171010900" },
+            { "code": "macheon", "name": "마천동", "adminCode": "1171011000" },
+            { "code": "ogeum", "name": "오금동", "adminCode": "1171011100" },
+            { "code": "bangi", "name": "방이동", "adminCode": "1171011200" }
+          ]
+        },
+        {
+          "code": "yangcheon",
+          "name": "양천구",
+          "slug": "yangcheon",
+          "adminCode": "11470",
+          "dongs": [
+            { "code": "mok", "name": "목동", "adminCode": "1147010100" },
+            { "code": "sinjeong", "name": "신정동", "adminCode": "1147010200" },
+            { "code": "sinwol", "name": "신월동", "adminCode": "1147010300" }
+          ]
+        },
+        {
+          "code": "yeongdeungpo",
+          "name": "영등포구",
+          "slug": "yeongdeungpo",
+          "adminCode": "11560",
+          "dongs": [
+            { "code": "yeongdeungpo", "name": "영등포동", "adminCode": "1156010100" },
+            { "code": "yeouido", "name": "여의도동", "adminCode": "1156010200" },
+            { "code": "dangsan", "name": "당산동", "adminCode": "1156010300" },
+            { "code": "sindorim", "name": "신도림동", "adminCode": "1156010400" },
+            { "code": "daerim", "name": "대림동", "adminCode": "1156010500" },
+            { "code": "mullae", "name": "문래동", "adminCode": "1156010600" },
+            { "code": "dorim", "name": "도림동", "adminCode": "1156010700" },
+            { "code": "singilmyeong", "name": "신길동", "adminCode": "1156010800" },
+            { "code": "yangpyeong", "name": "양평동", "adminCode": "1156010900" }
+          ]
+        },
+        {
+          "code": "yongsan",
+          "name": "용산구",
+          "slug": "yongsan",
+          "adminCode": "11170",
+          "dongs": [
+            { "code": "yongsan", "name": "용산동", "adminCode": "1117010100" },
+            { "code": "namyeong", "name": "남영동", "adminCode": "1117010200" },
+            { "code": "wonhyoro", "name": "원효로동", "adminCode": "1117010300" },
+            { "code": "hyochang", "name": "효창동", "adminCode": "1117010400" },
+            { "code": "yongmun", "name": "용문동", "adminCode": "1117010500" },
+            { "code": "hangang", "name": "한강로동", "adminCode": "1117010600" },
+            { "code": "ichon", "name": "이촌동", "adminCode": "1117010700" },
+            { "code": "itaewon", "name": "이태원동", "adminCode": "1117010800" },
+            { "code": "hannam", "name": "한남동", "adminCode": "1117010900" },
+            { "code": "bogwang", "name": "보광동", "adminCode": "1117011000" },
+            { "code": "seobinggo", "name": "서빙고동", "adminCode": "1117011100" },
+            { "code": "cheongpa", "name": "청파동", "adminCode": "1117011200" }
+          ]
+        },
+        {
+          "code": "eunpyeong",
+          "name": "은평구",
+          "slug": "eunpyeong",
+          "adminCode": "11380",
+          "dongs": [
+            { "code": "nokbeon", "name": "녹번동", "adminCode": "1138010100" },
+            { "code": "bulgwang", "name": "불광동", "adminCode": "1138010200" },
+            { "code": "gallyeon", "name": "갈현동", "adminCode": "1138010300" },
+            { "code": "gueup", "name": "구산동", "adminCode": "1138010400" },
+            { "code": "daejo", "name": "대조동", "adminCode": "1138010500" },
+            { "code": "eungam", "name": "응암동", "adminCode": "1138010600" },
+            { "code": "yeokchon", "name": "역촌동", "adminCode": "1138010700" },
+            { "code": "sinsa", "name": "신사동", "adminCode": "1138010800" },
+            { "code": "jeungsan", "name": "증산동", "adminCode": "1138010900" },
+            { "code": "suseok", "name": "수색동", "adminCode": "1138011000" },
+            { "code": "jingwan", "name": "진관동", "adminCode": "1138011100" }
+          ]
+        },
+        {
+          "code": "jongno",
+          "name": "종로구",
+          "slug": "jongno",
+          "adminCode": "11110",
+          "dongs": [
+            { "code": "cheongungyo", "name": "청운효자동", "adminCode": "1111010100" },
+            { "code": "sajik", "name": "사직동", "adminCode": "1111010200" },
+            { "code": "samcheong", "name": "삼청동", "adminCode": "1111010300" },
+            { "code": "buam", "name": "부암동", "adminCode": "1111010400" },
+            { "code": "pyeongchang", "name": "평창동", "adminCode": "1111010500" },
+            { "code": "mugyo", "name": "무악동", "adminCode": "1111010600" },
+            { "code": "gyonam", "name": "교남동", "adminCode": "1111010700" },
+            { "code": "jongno", "name": "종로동", "adminCode": "1111010800" },
+            { "code": "changsin", "name": "창신동", "adminCode": "1111010900" },
+            { "code": "sunginjang", "name": "숭인동", "adminCode": "1111011000" },
+            { "code": "hyehwa", "name": "혜화동", "adminCode": "1111011100" },
+            { "code": "ihwa", "name": "이화동", "adminCode": "1111011200" }
+          ]
+        },
+        {
+          "code": "jung",
+          "name": "중구",
+          "slug": "jung",
+          "adminCode": "11140",
+          "dongs": [
+            { "code": "sogong", "name": "소공동", "adminCode": "1114010100" },
+            { "code": "hoehyeon", "name": "회현동", "adminCode": "1114010200" },
+            { "code": "myeongdong", "name": "명동", "adminCode": "1114010300" },
+            { "code": "pilmyeong", "name": "필동", "adminCode": "1114010400" },
+            { "code": "jangchung", "name": "장충동", "adminCode": "1114010500" },
+            { "code": "gwanghui", "name": "광희동", "adminCode": "1114010600" },
+            { "code": "euljiro", "name": "을지로동", "adminCode": "1114010700" },
+            { "code": "sindang", "name": "신당동", "adminCode": "1114010800" },
+            { "code": "dasan", "name": "다산동", "adminCode": "1114010900" },
+            { "code": "yaksu", "name": "약수동", "adminCode": "1114011000" },
+            { "code": "cheonggu", "name": "청구동", "adminCode": "1114011100" },
+            { "code": "donghwa", "name": "동화동", "adminCode": "1114011200" },
+            { "code": "hwanghak", "name": "황학동", "adminCode": "1114011300" },
+            { "code": "junglim", "name": "중림동", "adminCode": "1114011400" }
+          ]
+        },
+        {
+          "code": "jungnang",
+          "name": "중랑구",
+          "slug": "jungnang",
+          "adminCode": "11260",
+          "dongs": [
+            { "code": "myeonmok", "name": "면목동", "adminCode": "1126010100" },
+            { "code": "sangbong", "name": "상봉동", "adminCode": "1126010200" },
+            { "code": "junghwa", "name": "중화동", "adminCode": "1126010300" },
+            { "code": "mukdong", "name": "묵동", "adminCode": "1126010400" },
+            { "code": "mangu", "name": "망우동", "adminCode": "1126010500" },
+            { "code": "sinnaemyeong", "name": "신내동", "adminCode": "1126010600" }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "gyeonggi",
+      "name": "경기도",
+      "shortName": "경기",
+      "slug": "gyeonggi",
+      "adminCode": "41",
+      "districts": [
+        {
+          "code": "suwon",
+          "name": "수원시",
+          "slug": "suwon",
+          "adminCode": "41110",
+          "dongs": [
+            { "code": "jangan", "name": "장안구", "adminCode": "4111100000" },
+            { "code": "gwonseon", "name": "권선구", "adminCode": "4111300000" },
+            { "code": "paldal", "name": "팔달구", "adminCode": "4111500000" },
+            { "code": "yeongtong", "name": "영통구", "adminCode": "4111700000" }
+          ]
+        },
+        {
+          "code": "seongnam",
+          "name": "성남시",
+          "slug": "seongnam",
+          "adminCode": "41130",
+          "dongs": [
+            { "code": "sujeong", "name": "수정구", "adminCode": "4113100000" },
+            { "code": "jungwon", "name": "중원구", "adminCode": "4113300000" },
+            { "code": "bundang", "name": "분당구", "adminCode": "4113500000" }
+          ]
+        },
+        {
+          "code": "goyang",
+          "name": "고양시",
+          "slug": "goyang",
+          "adminCode": "41280",
+          "dongs": [
+            { "code": "deogyang", "name": "덕양구", "adminCode": "4128100000" },
+            { "code": "ilsandong", "name": "일산동구", "adminCode": "4128500000" },
+            { "code": "ilsanseo", "name": "일산서구", "adminCode": "4128700000" }
+          ]
+        },
+        {
+          "code": "yongin",
+          "name": "용인시",
+          "slug": "yongin",
+          "adminCode": "41460",
+          "dongs": [
+            { "code": "cheoin", "name": "처인구", "adminCode": "4146100000" },
+            { "code": "giheung", "name": "기흥구", "adminCode": "4146300000" },
+            { "code": "suji", "name": "수지구", "adminCode": "4146500000" }
+          ]
+        },
+        {
+          "code": "bucheon",
+          "name": "부천시",
+          "slug": "bucheon",
+          "adminCode": "41190",
+          "dongs": [
+            { "code": "ojeong", "name": "오정동", "adminCode": "4119010100" },
+            { "code": "sosa", "name": "소사동", "adminCode": "4119010200" },
+            { "code": "wonmi", "name": "원미동", "adminCode": "4119010300" },
+            { "code": "sangmyeong", "name": "상동", "adminCode": "4119010400" },
+            { "code": "jungang", "name": "중동", "adminCode": "4119010500" },
+            { "code": "sinheung", "name": "신흥동", "adminCode": "4119010600" }
+          ]
+        },
+        {
+          "code": "ansan",
+          "name": "안산시",
+          "slug": "ansan",
+          "adminCode": "41270",
+          "dongs": [
+            { "code": "sangnok", "name": "상록구", "adminCode": "4127100000" },
+            { "code": "danwon", "name": "단원구", "adminCode": "4127300000" }
+          ]
+        },
+        {
+          "code": "anyang",
+          "name": "안양시",
+          "slug": "anyang",
+          "adminCode": "41170",
+          "dongs": [
+            { "code": "manan", "name": "만안구", "adminCode": "4117100000" },
+            { "code": "dongan", "name": "동안구", "adminCode": "4117300000" }
+          ]
+        },
+        {
+          "code": "namyangju",
+          "name": "남양주시",
+          "slug": "namyangju",
+          "adminCode": "41360",
+          "dongs": [
+            { "code": "byeollae", "name": "별내동", "adminCode": "4136010100" },
+            { "code": "hwado", "name": "화도읍", "adminCode": "4136010200" },
+            { "code": "jinjeop", "name": "진접읍", "adminCode": "4136010300" },
+            { "code": "onam", "name": "오남읍", "adminCode": "4136010400" },
+            { "code": "toegyewon", "name": "퇴계원읍", "adminCode": "4136010500" },
+            { "code": "donong", "name": "도농동", "adminCode": "4136010600" },
+            { "code": "jigeum", "name": "지금동", "adminCode": "4136010700" },
+            { "code": "dasan", "name": "다산동", "adminCode": "4136010800" }
+          ]
+        },
+        {
+          "code": "hwaseong",
+          "name": "화성시",
+          "slug": "hwaseong",
+          "adminCode": "41590",
+          "dongs": [
+            { "code": "bongdam", "name": "봉담읍", "adminCode": "4159010100" },
+            { "code": "dongtan", "name": "동탄동", "adminCode": "4159010200" },
+            { "code": "byeongjeom", "name": "병점동", "adminCode": "4159010300" },
+            { "code": "jangdeok", "name": "장덕동", "adminCode": "4159010400" },
+            { "code": "banwol", "name": "반월동", "adminCode": "4159010500" },
+            { "code": "jinahn", "name": "진안동", "adminCode": "4159010600" },
+            { "code": "taean", "name": "태안읍", "adminCode": "4159010700" },
+            { "code": "hyangnam", "name": "향남읍", "adminCode": "4159010800" }
+          ]
+        },
+        {
+          "code": "pyeongtaek",
+          "name": "평택시",
+          "slug": "pyeongtaek",
+          "adminCode": "41220",
+          "dongs": [
+            { "code": "pyeongtaek", "name": "평택동", "adminCode": "4122010100" },
+            { "code": "jije", "name": "지제동", "adminCode": "4122010200" },
+            { "code": "songtan", "name": "송탄동", "adminCode": "4122010300" },
+            { "code": "seojeongri", "name": "서정동", "adminCode": "4122010400" },
+            { "code": "anjung", "name": "안중읍", "adminCode": "4122010500" },
+            { "code": "paengseong", "name": "팽성읍", "adminCode": "4122010600" },
+            { "code": "oseong", "name": "오성읍", "adminCode": "4122010700" }
+          ]
+        },
+        {
+          "code": "uijeongbu",
+          "name": "의정부시",
+          "slug": "uijeongbu",
+          "adminCode": "41150",
+          "dongs": [
+            { "code": "uijeongbu", "name": "의정부동", "adminCode": "4115010100" },
+            { "code": "hogwon", "name": "호원동", "adminCode": "4115010200" },
+            { "code": "jangam", "name": "장암동", "adminCode": "4115010300" },
+            { "code": "sinchon", "name": "신곡동", "adminCode": "4115010400" },
+            { "code": "geumo", "name": "금오동", "adminCode": "4115010500" },
+            { "code": "ganeumjung", "name": "가능동", "adminCode": "4115010600" },
+            { "code": "nyangjumyeong", "name": "녹양동", "adminCode": "4115010700" },
+            { "code": "minrak", "name": "민락동", "adminCode": "4115010800" }
+          ]
+        },
+        {
+          "code": "siheung",
+          "name": "시흥시",
+          "slug": "siheung",
+          "adminCode": "41390",
+          "dongs": [
+            { "code": "daeyamyeong", "name": "대야동", "adminCode": "4139010100" },
+            { "code": "sincheon", "name": "신천동", "adminCode": "4139010200" },
+            { "code": "eunheng", "name": "은행동", "adminCode": "4139010300" },
+            { "code": "maewhwa", "name": "매화동", "adminCode": "4139010400" },
+            { "code": "mokgam", "name": "목감동", "adminCode": "4139010500" },
+            { "code": "jungok", "name": "정왕동", "adminCode": "4139010600" },
+            { "code": "baegot", "name": "배곧동", "adminCode": "4139010700" }
+          ]
+        },
+        {
+          "code": "paju",
+          "name": "파주시",
+          "slug": "paju",
+          "adminCode": "41480",
+          "dongs": [
+            { "code": "geumchon", "name": "금촌동", "adminCode": "4148010100" },
+            { "code": "gyoha", "name": "교하동", "adminCode": "4148010200" },
+            { "code": "unjeong", "name": "운정동", "adminCode": "4148010300" },
+            { "code": "munsan", "name": "문산읍", "adminCode": "4148010400" },
+            { "code": "beopwon", "name": "법원읍", "adminCode": "4148010500" },
+            { "code": "joridong", "name": "조리읍", "adminCode": "4148010600" }
+          ]
+        },
+        {
+          "code": "gimpo",
+          "name": "김포시",
+          "slug": "gimpo",
+          "adminCode": "41570",
+          "dongs": [
+            { "code": "gimpo", "name": "김포동", "adminCode": "4157010100" },
+            { "code": "janggi", "name": "장기동", "adminCode": "4157010200" },
+            { "code": "gurae", "name": "구래동", "adminCode": "4157010300" },
+            { "code": "unyang", "name": "운양동", "adminCode": "4157010400" },
+            { "code": "yangchon", "name": "양촌읍", "adminCode": "4157010500" },
+            { "code": "tongjin", "name": "통진읍", "adminCode": "4157010600" },
+            { "code": "gochon", "name": "고촌읍", "adminCode": "4157010700" }
+          ]
+        },
+        {
+          "code": "gwangmyeong",
+          "name": "광명시",
+          "slug": "gwangmyeong",
+          "adminCode": "41210",
+          "dongs": [
+            { "code": "gwangmyeong", "name": "광명동", "adminCode": "4121010100" },
+            { "code": "cheolsan", "name": "철산동", "adminCode": "4121010200" },
+            { "code": "haan", "name": "하안동", "adminCode": "4121010300" },
+            { "code": "sogha", "name": "소하동", "adminCode": "4121010400" }
+          ]
+        },
+        {
+          "code": "gwangju",
+          "name": "광주시",
+          "slug": "gwangju",
+          "adminCode": "41610",
+          "dongs": [
+            { "code": "gyeongan", "name": "경안동", "adminCode": "4161010100" },
+            { "code": "songjeong", "name": "송정동", "adminCode": "4161010200" },
+            { "code": "opoea", "name": "오포읍", "adminCode": "4161010300" },
+            { "code": "chowol", "name": "초월읍", "adminCode": "4161010400" },
+            { "code": "gonji", "name": "곤지암읍", "adminCode": "4161010500" },
+            { "code": "taejeon", "name": "태전동", "adminCode": "4161010600" }
+          ]
+        },
+        {
+          "code": "gunpo",
+          "name": "군포시",
+          "slug": "gunpo",
+          "adminCode": "41410",
+          "dongs": [
+            { "code": "gunpo", "name": "군포동", "adminCode": "4141010100" },
+            { "code": "sanbondong", "name": "산본동", "adminCode": "4141010200" },
+            { "code": "geumjeong", "name": "금정동", "adminCode": "4141010300" },
+            { "code": "dangjeong", "name": "당정동", "adminCode": "4141010400" },
+            { "code": "daeya", "name": "대야동", "adminCode": "4141010500" }
+          ]
+        },
+        {
+          "code": "hanam",
+          "name": "하남시",
+          "slug": "hanam",
+          "adminCode": "41450",
+          "dongs": [
+            { "code": "misa", "name": "미사동", "adminCode": "4145010100" },
+            { "code": "punsan", "name": "풍산동", "adminCode": "4145010200" },
+            { "code": "deokpung", "name": "덕풍동", "adminCode": "4145010300" },
+            { "code": "sinchang", "name": "신장동", "adminCode": "4145010400" },
+            { "code": "chuncheon", "name": "춘궁동", "adminCode": "4145010500" },
+            { "code": "gamil", "name": "감일동", "adminCode": "4145010600" }
+          ]
+        },
+        {
+          "code": "osan",
+          "name": "오산시",
+          "slug": "osan",
+          "adminCode": "41370",
+          "dongs": [
+            { "code": "osan", "name": "오산동", "adminCode": "4137010100" },
+            { "code": "sejong", "name": "세교동", "adminCode": "4137010200" },
+            { "code": "daeweongo", "name": "대원동", "adminCode": "4137010300" },
+            { "code": "namchon", "name": "남촌동", "adminCode": "4137010400" },
+            { "code": "sinchang", "name": "신장동", "adminCode": "4137010500" }
+          ]
+        },
+        {
+          "code": "icheon",
+          "name": "이천시",
+          "slug": "icheon",
+          "adminCode": "41500",
+          "dongs": [
+            { "code": "jungangjinheung", "name": "중리동", "adminCode": "4150010100" },
+            { "code": "gwango", "name": "관고동", "adminCode": "4150010200" },
+            { "code": "changjeon", "name": "창전동", "adminCode": "4150010300" },
+            { "code": "jeungpo", "name": "증포동", "adminCode": "4150010400" },
+            { "code": "bubal", "name": "부발읍", "adminCode": "4150010500" },
+            { "code": "jangho", "name": "장호원읍", "adminCode": "4150010600" }
+          ]
+        },
+        {
+          "code": "anseong",
+          "name": "안성시",
+          "slug": "anseong",
+          "adminCode": "41550",
+          "dongs": [
+            { "code": "anseong", "name": "안성동", "adminCode": "4155010100" },
+            { "code": "gongdo", "name": "공도읍", "adminCode": "4155010200" },
+            { "code": "miin", "name": "미양면", "adminCode": "4155010300" },
+            { "code": "iljeuk", "name": "일죽면", "adminCode": "4155010400" }
+          ]
+        },
+        {
+          "code": "uiwang",
+          "name": "의왕시",
+          "slug": "uiwang",
+          "adminCode": "41430",
+          "dongs": [
+            { "code": "gocheon", "name": "고천동", "adminCode": "4143010100" },
+            { "code": "oisam", "name": "오전동", "adminCode": "4143010200" },
+            { "code": "naeson", "name": "내손동", "adminCode": "4143010300" },
+            { "code": "pohil", "name": "포일동", "adminCode": "4143010400" }
+          ]
+        },
+        {
+          "code": "yangju",
+          "name": "양주시",
+          "slug": "yangju",
+          "adminCode": "41630",
+          "dongs": [
+            { "code": "yangju", "name": "양주동", "adminCode": "4163010100" },
+            { "code": "hoecheon", "name": "회천동", "adminCode": "4163010200" },
+            { "code": "eunhyeon", "name": "은현면", "adminCode": "4163010300" },
+            { "code": "gwangjeok", "name": "광적면", "adminCode": "4163010400" },
+            { "code": "baekseok", "name": "백석읍", "adminCode": "4163010500" },
+            { "code": "deoggye", "name": "덕계동", "adminCode": "4163010600" },
+            { "code": "okjeong", "name": "옥정동", "adminCode": "4163010700" }
+          ]
+        },
+        {
+          "code": "pocheon",
+          "name": "포천시",
+          "slug": "pocheon",
+          "adminCode": "41650",
+          "dongs": [
+            { "code": "pocheon", "name": "포천동", "adminCode": "4165010100" },
+            { "code": "sohol", "name": "소흘읍", "adminCode": "4165010200" },
+            { "code": "gasan", "name": "가산면", "adminCode": "4165010300" },
+            { "code": "sinbuk", "name": "신북면", "adminCode": "4165010400" }
+          ]
+        },
+        {
+          "code": "yeoju",
+          "name": "여주시",
+          "slug": "yeoju",
+          "adminCode": "41670",
+          "dongs": [
+            { "code": "yeoju", "name": "여주동", "adminCode": "4167010100" },
+            { "code": "ganaem", "name": "가남읍", "adminCode": "4167010200" },
+            { "code": "jeomchon", "name": "점동면", "adminCode": "4167010300" }
+          ]
+        },
+        {
+          "code": "dongducheon",
+          "name": "동두천시",
+          "slug": "dongducheon",
+          "adminCode": "41250",
+          "dongs": [
+            { "code": "saengyeon", "name": "생연동", "adminCode": "4125010100" },
+            { "code": "jijeon", "name": "지행동", "adminCode": "4125010200" },
+            { "code": "bosan", "name": "보산동", "adminCode": "4125010300" },
+            { "code": "songnae", "name": "송내동", "adminCode": "4125010400" }
+          ]
+        },
+        {
+          "code": "gwacheon",
+          "name": "과천시",
+          "slug": "gwacheon",
+          "adminCode": "41290",
+          "dongs": [
+            { "code": "jungang", "name": "중앙동", "adminCode": "4129010100" },
+            { "code": "galhyeon", "name": "갈현동", "adminCode": "4129010200" },
+            { "code": "byeolyang", "name": "별양동", "adminCode": "4129010300" },
+            { "code": "buwon", "name": "부림동", "adminCode": "4129010400" },
+            { "code": "gwamun", "name": "과천동", "adminCode": "4129010500" }
+          ]
+        },
+        {
+          "code": "guri",
+          "name": "구리시",
+          "slug": "guri",
+          "adminCode": "41310",
+          "dongs": [
+            { "code": "gallo", "name": "갈매동", "adminCode": "4131010100" },
+            { "code": "inchang", "name": "인창동", "adminCode": "4131010200" },
+            { "code": "gyomun", "name": "교문동", "adminCode": "4131010300" },
+            { "code": "suemul", "name": "수택동", "adminCode": "4131010400" },
+            { "code": "toepyeong", "name": "토평동", "adminCode": "4131010500" }
+          ]
+        },
+        {
+          "code": "yangpyeong",
+          "name": "양평군",
+          "slug": "yangpyeong",
+          "adminCode": "41830",
+          "dongs": [
+            { "code": "yangpyeong", "name": "양평읍", "adminCode": "4183010100" },
+            { "code": "gangsang", "name": "강상면", "adminCode": "4183010200" },
+            { "code": "gangharyeong", "name": "강하면", "adminCode": "4183010300" },
+            { "code": "yongmun", "name": "용문면", "adminCode": "4183010400" }
+          ]
+        },
+        {
+          "code": "gapyeong",
+          "name": "가평군",
+          "slug": "gapyeong",
+          "adminCode": "41820",
+          "dongs": [
+            { "code": "gapyeong", "name": "가평읍", "adminCode": "4182010100" },
+            { "code": "cheongpyeong", "name": "청평면", "adminCode": "4182010200" },
+            { "code": "sangmyeong", "name": "상면", "adminCode": "4182010300" },
+            { "code": "seolak", "name": "설악면", "adminCode": "4182010400" }
+          ]
+        },
+        {
+          "code": "yeoncheon",
+          "name": "연천군",
+          "slug": "yeoncheon",
+          "adminCode": "41800",
+          "dongs": [
+            { "code": "yeoncheon", "name": "연천읍", "adminCode": "4180010100" },
+            { "code": "jeonkok", "name": "전곡읍", "adminCode": "4180010200" },
+            { "code": "cheongsan", "name": "청산면", "adminCode": "4180010300" }
+          ]
+        }
+      ]
+    }
+  ]
+}
