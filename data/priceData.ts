@@ -1758,6 +1758,31 @@ export async function ensureDataLoaded(): Promise<void> {
   await loadSupabaseEntries();
 }
 
+/** 전체 활성 가격 데이터 조회 (홈페이지용) */
+export function getAllPriceEntries(): PriceEntry[] {
+  return getEntries().filter((e) => e.isActive);
+}
+
+/** 전체 데이터 통계 요약 (홈페이지용) */
+export function calculateGlobalSummary(): {
+  totalEntries: number;
+  avgPrice: number;
+  minPrice: number;
+  maxPrice: number;
+} {
+  const entries = getAllPriceEntries();
+  if (entries.length === 0) {
+    return { totalEntries: 0, avgPrice: 0, minPrice: 0, maxPrice: 0 };
+  }
+  const prices = entries.map((e) => e.price);
+  return {
+    totalEntries: entries.length,
+    avgPrice: Math.round(prices.reduce((a, b) => a + b, 0) / prices.length),
+    minPrice: Math.min(...prices),
+    maxPrice: Math.max(...prices),
+  };
+}
+
 /**
  * 특정 지역×유형 조합의 가격 데이터 조회
  *
